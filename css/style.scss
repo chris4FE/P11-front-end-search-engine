@@ -103,12 +103,14 @@ body {
 .recipes-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
     }
 .recipe-card{
-    width: 300px;
-    height: 400px;
+    width: 32%;
     background-color: #E7E7E7;
     border-radius: 5px;
+    margin-bottom: 30px;
     
     
     img {
@@ -123,11 +125,14 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        flex-wrap: wrap;
+        margin: 30px;
 
         &__title-and-duration{
             display: flex;
             width: 100%;
+            justify-content: space-between;
+            align-items: center;
         }
 
         &__title{
@@ -136,8 +141,33 @@ body {
 
         &__ingredients-and-instructions{
             display: flex;
+            justify-content: space-between;
+        }
+
+        &__ingredients{
+            width: 40%;
+        }
+        &__instructions{
+            width: 58%;
         }
         
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+    .recipe-card{
+        width: 48%;
+    }
+
+    
+}
+@media only screen and (max-width: 768px){
+
+    .recipe-card{
+        width: 100%;
     }
 
 }
